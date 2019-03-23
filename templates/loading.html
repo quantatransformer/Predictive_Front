@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>测试loading</title>
+	<style type="text/css">
+		html{font-size: 100px;}
+		/*loading 效果*/
+		.loadingW{position: fixed;top: 0px;left:0px;width: 100%;height: 100%;z-index: 100;display: block;background-color: rgba(0,0,0,0.3);}
+		.loadingDiv{position: relative;background-color: rgba(0,0,0,0.6);width: 1.5rem;height: 1.5rem;left:50%;top:50%;border-radius: 15px;transform: translate(-50%,-50%);}
+		.loadingDiv span{display: inline-block;height: 0.05rem;width: 0.2rem;border-radius: 0.025rem;background-color: white;position: absolute;
+		    animation: loadingMove 1.2s linear infinite;-webkit-animation: loadingMove 1.2s linear infinite;opacity: 0.3;left:17%;top:50%;transform:translateY(-50%);
+		    transform-origin: 0.5rem 0.025rem;-ms-transform-origin: 0.5rem 0.025rem;-webkit-transform-origin: 0.5rem 0.025rem;-moz-transform-origin: 0.5rem 0.025rem;-o-transform-origin: 0.5rem 0.025rem;
+		    }
+		.loadingDiv span:nth-of-type(1){animation-delay: 0s;}
+		.loadingDiv span:nth-of-type(2){transform: rotate(30deg);-ms-transform: rotate(30deg);-webkit-transform: rotate(30deg);-moz-transform: rotate(30deg);-o-transform: rotate(30deg);animation-delay: 0.1s;}
+		.loadingDiv span:nth-of-type(3){transform: rotate(60deg);-ms-transform: rotate(60deg);-webkit-transform: rotate(60deg);-moz-transform: rotate(60deg);-o-transform: rotate(60deg);animation-delay: 0.2s;}
+		.loadingDiv span:nth-of-type(4){transform: rotate(90deg);-ms-transform: rotate(90deg);-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-o-transform: rotate(90deg);animation-delay: 0.3s;}
+		.loadingDiv span:nth-of-type(5){transform: rotate(120deg);-ms-transform: rotate(120deg);-webkit-transform: rotate(120deg);-moz-transform: rotate(120deg);-o-transform: rotate(120deg);animation-delay: 0.4s;}
+		.loadingDiv span:nth-of-type(6){transform: rotate(150deg);-ms-transform: rotate(150deg);-webkit-transform: rotate(150deg);-moz-transform: rotate(150deg);-o-transform: rotate(150deg);animation-delay: 0.5s;}
+		.loadingDiv span:nth-of-type(7){transform: rotate(180deg);-ms-transform: rotate(180deg);-webkit-transform: rotate(180deg);-moz-transform: rotate(180deg);-o-transform: rotate(180deg);animation-delay: 0.6s;}
+		.loadingDiv span:nth-of-type(8){transform: rotate(210deg);-ms-transform: rotate(210deg);-webkit-transform: rotate(210deg);-moz-transform: rotate(210deg);-o-transform: rotate(210deg);animation-delay: 0.7s;}
+		.loadingDiv span:nth-of-type(9){transform: rotate(240deg);-ms-transform: rotate(240deg);-webkit-transform: rotate(240deg);-moz-transform: rotate(240deg);-o-transform: rotate(240deg);animation-delay: 0.8s;}
+		.loadingDiv span:nth-of-type(10){transform: rotate(270deg);-ms-transform: rotate(270deg);-webkit-transform: rotate(270deg);-moz-transform: rotate(270deg);-o-transform: rotate(270deg);animation-delay: 0.9s;}
+		.loadingDiv span:nth-of-type(11){transform: rotate(300deg);-ms-transform: rotate(300deg);-webkit-transform: rotate(300deg);-moz-transform: rotate(300deg);-o-transform: rotate(300deg);animation-delay: 1s;}
+		.loadingDiv span:nth-of-type(12){transform: rotate(330deg);-ms-transform: rotate(330deg);-webkit-transform: rotate(330deg);-moz-transform: rotate(330deg);-o-transform: rotate(330deg);animation-delay: 1.1s;}
+		@keyframes loadingMove{
+		    0%{opacity: 1}
+		    100%{opacity: 0.3}
+		}
+	</style>
+</head>
+<body>
+
+	<!--loading框-->
+	<!-- 弹框层 -->
+	<div class="loadingW">
+		<!-- loading框 -->
+		<div class="loadingDiv">
+			<span></span><span></span><span></span><span></span>
+			<span></span><span></span><span></span><span></span>
+			<span></span><span></span><span></span><span></span>
+		</div>
+	</div>
+
+</body>
+</html>

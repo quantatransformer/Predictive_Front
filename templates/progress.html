@@ -1,0 +1,73 @@
+<!doctype html>
+ 
+<html>
+ 
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<style type="text/css">
+ 
+.main{
+height: 30px;
+width:500px;
+background: #787878;
+margin:100px auto;
+border-radius: 3px;
+}
+.inner{
+height: 20px;
+width: 0;
+background: #e4a348;
+position: relative;
+top: 2px;
+left: 5px;
+border-radius: 2px;
+overflow: hidden;
+}
+.line{
+position: relative;
+left: 5px;
+top: 14px;
+width: 490px;
+border-top: 3px dashed #fff;
+}
+img{
+position: absolute;
+top: 103px;
+left: 395px;
+}
+}
+</style>
+ 
+</head>
+ 
+<body>
+<div class="main">
+<div class="line"></div>
+<div class="inner">
+</div>
+ 
+</div>
+<script type="text/javascript">
+var _width =0;
+var timer;
+timer = setInterval(function(){
+_width +=5;
+if(_width>=490){
+clearInterval(timer);
+}
+document.getElementsByClassName("inner")[0].style.width=_width+"px";
+document.getElementsByTagName("img")[0].style.left=395+_width+"px";
+var _data = Math.floor((_width/490)*100);
+document.getElementsByClassName("data")[0].innerText = _data+"%";
+document.getElementsByClassName("data")[0].style.left=396+_width+"px";
+ 
+ 
+},100);
+</script>
+ 
+ 
+ 
+</body>
+ 
+</html>
